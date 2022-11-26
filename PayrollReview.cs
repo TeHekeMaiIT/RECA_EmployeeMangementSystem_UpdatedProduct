@@ -21,7 +21,7 @@ namespace RecaPayroll
         string id, Hours;
         public string Emp_ID;
         private Panel leftBoarderBtn;
-        public string ConnectionString = "server=localhost;user id=root;password=Dbms@2022;persistsecurityinfo=True;database=human_resources";
+        public string ConnectionString;// = "server=localhost;user id=root;password=764702111;persistsecurityinfo=True;database=human_resources";
 
         public PayrollReview()
         {
@@ -40,6 +40,7 @@ namespace RecaPayroll
 
         private void PayrollReview_Load(object sender, EventArgs e)
         {
+            ConnectionString = con.connectionString();
             FillPayrollReviewGrid();
         }
 
